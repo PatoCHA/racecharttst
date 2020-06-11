@@ -79,21 +79,21 @@
     let title = svg.append('text')
      .attr('class', 'title')
      .attr('y', 24)
-     .html('18 years of Interbrand’s Top Global Brands');
+     .html('Casos Covid MX en los ultimos 155 d');
   
     let subTitle = svg.append("text")
      .attr("class", "subTitle")
      .attr("y", 55)
-     .html("Brand value, $m");
+     .html("casos");
    
     let caption = svg.append('text')
      .attr('class', 'caption')
      .attr('x', width)
      .attr('y', height-5)
      .style('text-anchor', 'end')
-     .html('Source: Interbrand');
+     .html('fuente: datos abiertos');
 
-     let year = 2000;
+     let year = 50;
     
   d3.csv('brand_values.csv').then(function(data) {
     //if (error) throw error;
@@ -301,8 +301,8 @@
     
       yearText.html(~~year);
      
-     if(year == 2018) ticker.stop();
-     year = d3.format('.1f')((+year) + 0.1);
+     if(year == 155 ) ticker.stop();
+     year = d3.format('.1f')((+year) + 1);
    },tickDuration);
 
  });
